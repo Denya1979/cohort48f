@@ -24,10 +24,10 @@ class CompanyImplTest {
 
         Employee[] firma = new Employee[5]; // create array of objects type Employee
 
-        firma[0] = new Manager(1000, "Bill", "Smith", 160, 50, 5000,5);
-        firma[1] = new Worker(2000, "Anne", "White", 170, 39,15);
+        firma[0] = new Manager(1000, "Bill", "Smith", 160, 35, 5000,5);
+        firma[1] = new Worker(2000, "Anne", "Müller", 170, 34,15);
         firma[2] = new SalesManager(3000, "Peter", "Jackson", 160, 29, 19000,0.1);
-        firma[3] = new SalesManager(4000, "Robin", "Good", 180, 27, 20000,0.1);
+        firma[3] = new SalesManager(4000, "Robin", "Good", 80, 27, 20000,0.1);
 
         //TODO не забыть добавить объекты после написания метода addEmployee
         for (int i = 0; i < firma.length; i++) {
@@ -57,9 +57,9 @@ class CompanyImplTest {
 
     @Test
     void updateEmployee() {
-        Employee worker = new Worker(2000, "Anne", "Müller", 160, 25, 20);
+        Employee worker = new Worker(2000, "Anne", "Müller", 160, 34, 20);
         assertEquals(firma[1], company.updateEmployee(worker));
-        worker = new Worker(6000, "Anne", "Müller", 160, 30, 20);
+        worker = new Worker(6000, "Anne", "Müller", 160, 34, 20);
         assertNull(company.updateEmployee(worker));
     }
 
